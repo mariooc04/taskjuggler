@@ -46,6 +46,7 @@ account cost "Project Cost" {
   account manag "Management"
   account wFront "Web Front-End"
   account back "Back-End"
+  account AFront "Front-End Android"
 }
 account rev "Payments"
 # The Profit&Loss analysis should be rev - cost accounts.
@@ -144,6 +145,34 @@ task WMGame "Web & Mobile Game" {
       allocate dev1
       depends WMGame.twebF.tFEc
     }    
+  }
+
+  task tFAJ "Front End Android juego" {
+		purge chargeset
+		chargeset AFront
+		responsible dev3
+		task tIFA "Interface Front End Android" {
+				effort 15d
+				allocate dev3
+		}
+		task tBBDDFA "Front End Android connection with BBDD" {
+				effort 12d
+				allocate dev3
+		}
+  }
+
+  task tCS "Cloud Support back" {
+		purge chargeset
+		chargeset back
+		responsible dev1
+		task tEvDec "Evaluate and decide which cloud is gonna be used" {
+				effort 2d
+				allocate dev1
+		}
+		task tDep "Deply back in cloud" {
+				effort 5d
+				allocate dev1
+		}
   }
 
   task ttest "Accpetance tests" {
