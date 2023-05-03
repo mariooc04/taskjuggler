@@ -262,6 +262,10 @@ textreport frame "" {
     formats html
     center '<[report id="overview"]>'
   }
+  textreport initialPlan "initialPlan" {
+  	formats html
+	center '<[report id="initialPlan"]>'
+  }
 
   textreport "Status" {
     formats html
