@@ -19,7 +19,7 @@ project pSix "Web Game"  2023-03-15 +4m {
   # the project reports. If not specified, the current day will be
   # used, but this will likely be outside of the project range, so it
   # can't be seen in the reports.
-  now 2023-04-15-13:00
+  now 2023-05-03-13:00
   # The currency for all money values is the US Dollar.
   currency "EUR"
 
@@ -303,24 +303,6 @@ taskreport overview "" {
   balance cost rev
   caption 'All effort values are in man days.'
 }
-
-# A traditional Gantt chart with a project overview.
-taskreport project "" {
-  scenarios actual
-  headline "Current Project Plan"
-  columns bsi { title 'WBS' },
-          name, start, end, effort, cost,
-          revenue, chart { ${TaskTip} }
-  # For this report we like to have the abbreviated weekday in front
-  # of the date. %a is the tag for this.
-  start 2023-05-03
-  timeformat "%a %Y-%m-%d"
-  loadunit days
-  hideresource @all
-  balance cost rev
-  caption 'All effort values are in man days.'
-}
-
 
 # Macro to set the background color of a cell according to the alert
 # level of the task.
