@@ -68,6 +68,11 @@ resource dev2 "Samantha Müller" {
 resource dev3 "Peter Green" {
   email "kkk@unizar.es"
 }
+resource king "Mario Ortega" {
+	email "king@king.com"
+	rate 500
+	limits dailymax 4h
+}
 
 # Now we specify the work packages. The whole project is described as
 # a task that contains subtasks. These subtasks are then broken down
@@ -150,7 +155,7 @@ task WMGame "Web & Mobile Game" {
   task tFAJ "Front End Android juego" {
 		purge chargeset
 		chargeset AFront
-		responsible dev3
+		responsible king
 		journalentry 2023-05-03 "Task completed before deadline" {
         		author boss
         		alert green
@@ -158,11 +163,11 @@ task WMGame "Web & Mobile Game" {
       		}
 		task tIFA "Interface Front End Android" {
 				effort 15d
-				allocate dev3
+				allocate king
 		}
 		task tBBDDFA "Front End Android connection with BBDD" {
 				effort 12d
-				allocate dev3
+				allocate king
 		}
   }
 
