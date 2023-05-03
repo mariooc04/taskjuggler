@@ -151,7 +151,7 @@ task WMGame "Web & Mobile Game" {
 		purge chargeset
 		chargeset AFront
 		responsible dev3
-		journalentry 2023-03-28 "Task completed before deadline" {
+		journalentry 2023-05-03 "Task completed before deadline" {
         		author boss
         		alert green
         		summary "The team has ended the task before deadline."
