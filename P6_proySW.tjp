@@ -71,7 +71,7 @@ resource dev3 "Peter Green" {
 resource king "Mario Ortega" {
 	email "king@king.com"
 	rate 500
-	limits dailymax 4h
+	limits { dailymax 4h }
 }
 
 # Now we specify the work packages. The whole project is described as
